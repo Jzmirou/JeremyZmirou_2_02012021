@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+body {
+    font-family: "Raleway", "sans-serif";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    margin: 0
+}
+
+button, input {
+    outline: none;
+}
+
+.header {
+    display: grid;
+    grid-template-areas: "logo . . navbar";
+    align-items: center;
+    margin: 0 50px
+}
+
+.header--logo {
+    grid-area: logo;
+}
+
+.header__navbar {
+    display: flex;
+    justify-self: flex-end;
+    grid-area: navbar;
+}
+
+.header__navbar-mobile {
+    display: none;
+    grid-area: mobile;
+    justify-content: space-around;
+}
+
+.header__navbar--link {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 7rem;
+}
+
+.header__navbar--link:nth-child(1) {
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
+
+}
+.header__navbar--link:nth-child(3) {
+    font-weight: bold;
+    color: #0065FC;
+
+}
+
+.header__navbar-mobile--link{
+    border-bottom: 2px solid #0065FC;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+.header__navbar-mobile--link:nth-child(2) {
+    border-bottom: 2px solid #F2F2F2;
+}
+
+
+@media all and (max-device-width: 480px) {
+    .header {
+        margin : 0 0 ;
+        display: grid;
+        grid-template-areas: "logo navbar"
+                            "mobile mobile ";   
+        align-items: center;
+    }
+    .header--logo {
+        margin: 0 22px;
+    }
+    .header__navbar{
+        margin: 0 15px;
+    }
+    .header__navbar-mobile {
+        display: flex;
+    }
+    
+    .header__navbar--link:nth-child(3) {
+        padding: 0 5px;
+    }
+    .header__navbar--link:nth-child(1), .header__navbar--link:nth-child(2) {
+        display: none;
+    }
+}
