@@ -458,4 +458,26 @@ button, input {
     .main__search__filter__section {
         margin: 5px;
     }
+    .main__hbg {
+        grid-template-areas: "popular popular popular" 
+                             "result result result";
+    }
+    .main__hbg__result {
+        background-color: #fff;
+        padding: 5px;
+    }
+    .main__hbg__result__cards {
+        grid-template-columns: 1fr
+    }
+    .main__hbg__result--card {
+        margin: 10px 5px;
+    }
+    .main__hbg__popular {
+        margin-left: 0;
+        border-radius: 0;
+        padding: 5px;
+    }
+    .main__hbg__popular--card {
+        margin: 5px 10px;
+    }
 }
