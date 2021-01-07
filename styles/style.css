@@ -188,6 +188,178 @@ button, input {
     font-size: 12px;
     color: #0065FC;
 }
+.main__hbg {
+    display: grid;
+    grid-template-areas: "result result popular" "result result popular";
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 45px;
+    justify-content: space-between;
+}
+
+.main__hbg__result {
+    grid-area: result;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.main__hbg__result--title {
+    margin: 16px 0 25px 20px;
+}
+
+.main__hbg__result__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.main__hbg__result--card {
+    min-width: 180px;
+    min-height: 200px;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #fff;
+    margin: 15px;
+    box-shadow: 0px 0px 5px -1px rgb(179, 179, 179);
+}
+
+.main__hbg__result--card-img {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 120px;
+    border-radius: 25px 25px 0 0;
+}
+
+.result--img1 {
+    background-image: url("/asset/img/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+}
+
+.result--img2 {
+    background-image: url("/asset/img/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+}
+
+.result--img3 {
+    background-image: url("/asset/img/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+}
+
+.result--img4 {
+    background-image: url("/asset/img/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+
+.result--img5 {
+    background-image: url("/asset/img/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+}
+
+.result--img6 {
+    background-image: url("/asset/img/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+}
+
+.main__hbg__result--card-content {
+    margin: 5px 0 5px 10px;
+}
+
+.main__hbg__result--card-content div {
+    margin-top: 7px;
+}
+
+.main__hbg__result--card-name {
+    font-weight: bold;
+}
+
+.main__hbg__result--card-star i {
+    color: #F2F2F2;
+    font-size: 12px;
+}
+
+.main__hbg__result--card-star i[data-star='true'] {
+    color: #0065FC;
+}
+
+.main__hbg__result--more-result {
+    margin: 35px 25px;
+    font-weight: bold;
+}
+
+.main__hbg__popular {
+    grid-area: popular;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.main__hbg__popular--title {
+    margin: 16px 20px 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__hbg__popular--title i {
+    font-size: 24px;
+}
+
+.main__hbg__popular__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main__hbg__popular--card {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    height: 145px;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px;
+    box-shadow: 0px 0px 5px -1px rgb(179, 179, 179);
+    background-color: #fff;
+}
+
+.main__hbg__popular--card-img {
+    width: 125px;
+    border-radius: 20px 0 0 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.popular--img1 {
+    background-image: url("/asset/img/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+}
+
+.popular--img2 {
+    background-image: url("/asset/img/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg");
+}
+
+.popular--img3 {
+    background-image: url("/asset/img/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+}
+
+.main__hbg__popular--card-content {
+    padding: 15px 10px 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__hbg__popular--card-name {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.main__hbg__popular--card-price {
+    font-size: 14px;
+    margin: 10 0 5px 0;
+    flex-grow: 3;
+}
+
+.main__hbg__popular--card-star {
+    color: #F2F2F2;
+    font-size: 12px;
+}
+
+.main__hbg__popular--card-star i[data-star='true'] {
+    color: #0065FC;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .header {
