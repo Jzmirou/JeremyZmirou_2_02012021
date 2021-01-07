@@ -547,4 +547,37 @@ button, input {
     .main__hbg__popular--card {
         margin: 5px 10px;
     }
+    .main__activity {
+        padding: 20px;
+    }
+    .main__activity__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .main__activity--card:nth-child(1) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .main__activity--card:nth-child(2) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .main__activity--card:nth-child(3) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .main__activity--card:nth-child(4) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .main__activity--card:nth-child(5) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .main__activity--card:nth-child(6) {
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
