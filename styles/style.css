@@ -2,19 +2,31 @@
 body {
     font-family: "Raleway", "sans-serif";
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 h1, h2, h3 {
     margin: 0
 }
-
 button, input {
     outline: none;
 }
+.result--img1 {background-image: url("/asset/img/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");}
+.result--img2 {background-image: url("/asset/img/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg");}
+.result--img3 {background-image: url("/asset/img/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");}
+.result--img4 {background-image: url("/asset/img/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");}
+.result--img5 {background-image: url("/asset/img/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");}
+.result--img6 {background-image: url("/asset/img/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");}
+.popular--img1 {background-image: url("/asset/img/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");}
+.popular--img2 {background-image: url("/asset/img/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg");}
+.popular--img3 {background-image: url("/asset/img/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");}
+.activity--img1 {background-image: url("/asset/img/activités/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");}
+.activity--img2 {background-image: url("/asset/img/activités/paul-hermann-QFTrLdQIRhI-unsplash.jpg");}
+.activity--img3 {background-image: url("/asset/img/activités/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");}
+.activity--img4 {background-image: url("/asset/img/activités/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");}
+.activity--img5 {background-image: url("/asset/img/activités/florian-wehde-xW9e8gdotxI-unsplash.jpg");}
+.activity--img6 {background-image: url("/asset/img/activités/lena-paulin-wH2-EJoDcV0-unsplash.jpg");}
 
 .header {
     display: grid;
@@ -230,31 +242,6 @@ button, input {
     height: 120px;
     border-radius: 25px 25px 0 0;
 }
-
-.result--img1 {
-    background-image: url("/asset/img/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-}
-
-.result--img2 {
-    background-image: url("/asset/img/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-}
-
-.result--img3 {
-    background-image: url("/asset/img/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-}
-
-.result--img4 {
-    background-image: url("/asset/img/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-}
-
-.result--img5 {
-    background-image: url("/asset/img/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-}
-
-.result--img6 {
-    background-image: url("/asset/img/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-}
-
 .main__hbg__result--card-content {
     margin: 5px 0 5px 10px;
 }
@@ -323,17 +310,6 @@ button, input {
     background-position: center;
 }
 
-.popular--img1 {
-    background-image: url("/asset/img/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-}
-
-.popular--img2 {
-    background-image: url("/asset/img/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg");
-}
-
-.popular--img3 {
-    background-image: url("/asset/img/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-}
 
 .main__hbg__popular--card-content {
     padding: 15px 10px 5px 15px;
@@ -360,6 +336,63 @@ button, input {
 .main__hbg__popular--card-star i[data-star='true'] {
     color: #0065FC;
 }
+.main__activity {
+    margin: 60px 0;
+}
+
+.main__activity__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 10px);
+    column-gap: 40px;
+    row-gap: 40px;
+    margin: 30px 0;
+}
+
+.main__activity--card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0px 4px 11px -6px #595959;
+}
+
+.main__activity--card:nth-child(1) {
+    grid-row: 1/11;
+}
+
+.main__activity--card:nth-child(2) {
+    grid-row: 1/7;
+}
+
+.main__activity--card:nth-child(3) {
+    grid-row: 7/11;
+}
+
+.main__activity--card:nth-child(4) {
+    grid-row: 1/11;
+    grid-column: 3;
+}
+
+.main__activity--card:nth-child(5) {
+    grid-row: 1/6;
+}
+
+.main__activity--card:nth-child(6) {
+    grid-row: 6/11;
+}
+
+.main__activity--card-content {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.main__activity--card-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0 0
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .header {
@@ -381,7 +414,8 @@ button, input {
         margin: 5px;
     }
     .main__hbg {
-        grid-template-areas: "popular popular popular" "result result result";
+        grid-template-areas: "popular popular popular" 
+                             "result result result";
     }
     .main__hbg__result {
         background-color: #fff;
