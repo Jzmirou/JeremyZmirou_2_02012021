@@ -8,15 +8,13 @@ a {
     color: inherit;
 }
 
-h1 {
+h1, h2, h3 {
     margin: 0
 }
 
 button, input {
     outline: none;
 }
-
-
 
 .header {
     display: grid;
@@ -51,19 +49,20 @@ button, input {
 .header__navbar--link:nth-child(1) {
     border-top: 2px solid #0065FC;
     color: #0065FC;
-
 }
+
 .header__navbar--link:nth-child(3) {
     font-weight: bold;
     color: #0065FC;
 }
 
-.header__navbar-mobile--link{
+.header__navbar-mobile--link {
     border-bottom: 2px solid #0065FC;
     width: 100%;
     text-align: center;
     padding: 15px;
 }
+
 .header__navbar-mobile--link:nth-child(2) {
     border-bottom: 2px solid #F2F2F2;
 }
@@ -71,22 +70,21 @@ button, input {
 .main {
     margin: 0 50px
 }
+
 .main__title h1 {
-    font-size: 1.8rem;
+    font-size: 28px;
 }
+
 .main__title p {
     margin: 0;
     padding: 10px 0;
-    font-size: 1.1rem;
+    font-size: 18px;
 }
 
-.main__search {
+.main__search__input {
+    display: flex;
     height: 50px;
     margin: 10px 0;
-    display: flex;
-}
-.main__search--wrapper {
-    display: flex;
 }
 
 .main__search--icon {
@@ -94,14 +92,14 @@ button, input {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 50px;
+    min-width: 50px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
 }
 
 .main__search--input {
     height: 48px;
-    width: 200px;
+    min-width: 100px;
     border: 0.5px solid #F2F2F2;
     outline: none;
     padding: 0 15px;
@@ -117,18 +115,21 @@ button, input {
     border-radius: 0 15px 15px 0;
     padding: 15px;
 }
+
 .main__search--btn i {
     display: none;
 }
 
-.main__filter {
+.main__search__filter {
     display: flex;
     align-items: center;
 }
-.main__filter h3 {
-    margin: 15px;
+
+.main__search__filter h3 {
+    margin: 15px 15px 15px 0;
 }
-.main__filter__section {
+
+.main__search__filter__section {
     display: flex;
     align-items: center;
     height: 45px;
@@ -136,14 +137,14 @@ button, input {
     border: 2px solid #eeeeee;
     border-radius: 50px;
 }
-.main__filter__section--wrapper{
+
+.main__search__filter__section--wrapper {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    
 }
 
-.main__filter__section--icon {
+.main__search__filter__section--icon {
     background-color: #DEEBFF;
     display: flex;
     align-items: center;
@@ -153,11 +154,12 @@ button, input {
     font-size: 20px;
     border-radius: 50px;
 }
-.main__filter__section--icon i {
-    color:#0065FC ;
+
+.main__search__filter__section--icon i {
+    color: #0065FC;
 }
 
-.main__filter__section span {
+.main__search__filter__section span {
     margin: 10px;
     font-weight: bold;
 }
@@ -165,8 +167,8 @@ button, input {
 .main__info {
     display: flex;
     margin-top: 30px;
-    
 }
+
 .main__info span {
     font-size: 15px;
 }
@@ -179,36 +181,54 @@ button, input {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin : -3px 10px 0 0 
-
+    margin: -3px 10px 0 0
 }
-
 
 .main__info--icon i {
     font-size: 12px;
     color: #0065FC;
 }
 
-@media all and (max-device-width: 480px) {
-    .container {
-        padding: 0 0;
-    }
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
     .header {
-        margin : 0 0 30px ;
+        margin: 0 30px;
+    }
+    .main {
+        margin: 0
+    }
+    .main__title {
+        margin: 0 30px;
+    }
+    .main__search {
+        margin: 30px;
+    }
+    .main__search__filter {
+        display: block
+    }
+    .main__search__filter__section {
+        margin: 5px;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .header {
+        margin: 0 0 30px;
         display: grid;
-        grid-template-areas: "logo navbar"
-                            "mobile mobile ";   
+        grid-template-areas: "logo navbar" 
+                             "mobile mobile ";
         align-items: center;
     }
     .header--logo {
-        margin: 0 22px;
+        margin: 0 22px
     }
-    .header__navbar{
+    .header__navbar {
         margin: 0 15px;
     }
     .header__navbar-mobile {
         display: flex;
-    }   
+    }
     .header__navbar--link:nth-child(3) {
         padding: 0 5px;
     }
@@ -216,17 +236,17 @@ button, input {
         display: none;
     }
     .main {
+        margin: 0
+    }
+    .main__title {
         margin: 0 20px;
     }
     .main__title h1 {
-        font-size: 1.4rem;
-        margin-bottom: 0.6rem;
+        font-size: 21px;
+        margin-bottom: 5px
     }
-    .main__title p {
-        font-size: 1rem;
-    }
-    .main__search{
-        justify-content: center;
+    .main__search {
+        margin: 0 20px
     }
     .main__search--btn span {
         display: none;
@@ -234,13 +254,10 @@ button, input {
     .main__search--btn i {
         display: block;
     }
-    .main__filter {
+    .main__search__filter {
         display: block
     }
-    .main__filter__section{
+    .main__search__filter__section {
         margin: 5px;
-    }
-    .main__filter__section--wrapper{
-        margin: 0;
     }
 }
