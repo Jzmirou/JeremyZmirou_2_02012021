@@ -393,6 +393,24 @@ button, input {
     height: 100%;
     border-radius: 25px 25px 0 0
 }
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F2F2F2;
+    padding: 50px;
+    column-gap: 10px;
+}
+.footer__section {
+    display: flex;
+    flex-direction: column;
+}
+.footer__section--title {
+    font-weight: bold;
+    margin: 15px 0;
+}
+.footer__section span {
+    margin: 7px 0;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
     .header {
@@ -579,5 +597,8 @@ button, input {
     .main__activity--card:nth-child(6) {
         grid-row: auto;
         grid-column: auto;
+    }
+    .footer {
+        grid-template-columns: 1fr;
     }
 }
