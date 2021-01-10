@@ -126,6 +126,7 @@ button, input {
     border: none;
     border-radius: 0 15px 15px 0;
     padding: 15px;
+    cursor: pointer;
 }
 
 .main__search--btn i {
