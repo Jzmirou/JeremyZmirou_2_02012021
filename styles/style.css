@@ -28,6 +28,7 @@ button, input {
 .activity--img5 {background-image: url("../asset/img/activités/florian-wehde-xW9e8gdotxI-unsplash.jpg");}
 .activity--img6 {background-image: url("../asset/img/activités/lena-paulin-wH2-EJoDcV0-unsplash.jpg");}
 
+
 .header {
     display: grid;
     grid-template-areas: "logo . . navbar";
