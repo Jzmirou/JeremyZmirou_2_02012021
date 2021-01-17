@@ -1,7 +1,7 @@
 # Reservia
 
 Deuxième projet du parcours "Développeur web" chez OpenClassroom. L'objectif est d'intégrer la maquette d'un site de planification de vacance nommé "Reservia" (voir l'image ci-dessous).
-![maquette web reservia](./img/mockup/desktop.png)
+![maquette web reservia](./asset/img/mockup/desktop-1.png)
 
 ## Éléments fournis par l'entreprise virtuelle.
 - La maquette pour les résolutions ordinateur et téléphone nous est donné.
@@ -18,7 +18,7 @@ Deuxième projet du parcours "Développeur web" chez OpenClassroom. L'objectif e
 - Dans le menu, les liens “Hébergements” et “Activités” sont des ancres qui doivent mener aux sections de la page.
 - Même si aucune maquette pour la résolution tablette n'est fournis, l'intégration doit la prendre en charge.
 - Les images doivent être de taille adéquate afin qu'elle soit le plus jolie possible en impactant le moins possible le temps de chargement de la page.
-- [Le code devra utiliser les balises sémantiques et ne doit contenir aucune erreur ni alerte au validateur W3C HTML et CSS.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmathisbarre.github.io%2FMathisBarre_2_14102020%2F)
+- [Le code devra utiliser les balises sémantiques et ne doit contenir aucune erreur ni alerte au validateur W3C HTML et CSS.]
 - Le site devra être compatible avec les dernières versions de Chrome et Firefox.
 - Le HTML et le CSS doivent être séparés et le dossier doit être organisé
 - Le code doit être versionné avec git et doit avoir un repo distant sur Github ou Gitlab
