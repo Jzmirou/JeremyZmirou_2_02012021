@@ -2,6 +2,8 @@
 
 Deuxième projet du parcours "Développeur web" chez OpenClassroom. L'objectif est d'intégrer la maquette d'un site de planification de vacance nommé "Reservia"
 
+![mockup](https://github.com/Jzmirou/JeremyZmirou_2_02012021/blob/master/asset/mockup/Desktop-1.png)
+
 ## Éléments fournis par l'entreprise virtuelle.
 - La maquette pour les résolutions ordinateur et téléphone nous est donné.
 - Toutes les images présentes sur le site sont aussi livrés en format sm, md, l & xl.
