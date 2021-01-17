@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 /*Variable*/
+
 :root {
     /*Color*/
     --primary: #0065FC;
-    --bs-color: #595959
+    --bs-color: #595959   /*box-shadow color*/
 }
+
 /*Base*/
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Raleway", "sans-serif";
 }
@@ -15,14 +22,16 @@ a {
     color: inherit;
 }
 
-h1, h2, h3 ,p{
+h1, h2, h3, p {
     margin: 0
 }
 
 button, input {
     outline: none;
 }
+
 /*Image card*/
+
 .result--img1 {
     background-image: url("../asset/img/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
 }
@@ -86,7 +95,7 @@ button, input {
 .header {
     display: grid;
     grid-template-areas: "logo . . navbar sign-up";
-    grid-template-columns: 1fr auto auto 1fr 70px;
+    grid-template-columns: 1fr auto auto 1fr 103px;
     align-items: center;
     margin: 0 50px
 }
@@ -157,9 +166,10 @@ button, input {
     min-width: 100px;
     border: 0.5px solid #F2F2F2;
     padding: 0 16px;
-    font-weight:700;
+    font-weight: 700;
 }
-.main__search--input::placeholder{
+
+.main__search--input::placeholder {
     color: #000;
 }
 
@@ -254,8 +264,7 @@ button, input {
 
 .main__hbg {
     display: grid;
-    grid-template-areas: "result result popular" 
-                         "result result popular";
+    grid-template-areas: "result result popular" "result result popular";
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 45px;
     column-gap: 50px;
@@ -309,16 +318,18 @@ button, input {
 .main__hbg__result--card-name {
     font-weight: bold;
 }
-.main__hbg__result--card-price{
-    font-size:14px
+
+.main__hbg__result--card-price {
+    font-size: 14px
 }
+
 .main__hbg__result--card-star i {
     color: #F2F2F2;
     font-size: 12px;
 }
 
 .main__hbg__result--card-star i[data-star='true'] {
-    color:var(--primary);
+    color: var(--primary);
 }
 
 .main__hbg__result--more-result {
@@ -631,7 +642,7 @@ button, input {
         border-radius: 0;
         padding: 16px;
     }
-    .main__hbg__popular__cards{
+    .main__hbg__popular__cards {
         row-gap: 10px;
     }
     .main__activity {
