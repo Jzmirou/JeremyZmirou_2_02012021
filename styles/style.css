@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+/*Variable*/
+:root {
+    /*Color*/
+    --primary: #0065FC;
+    --bs-color: #595959
+}
+/*Base*/
 body {
     font-family: "Raleway", "sans-serif";
 }
@@ -8,14 +15,14 @@ a {
     color: inherit;
 }
 
-h1, h2, h3 {
+h1, h2, h3 ,p{
     margin: 0
 }
 
 button, input {
     outline: none;
 }
-
+/*Image card*/
 .result--img1 {
     background-image: url("../asset/img/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
 }
@@ -98,27 +105,21 @@ button, input {
     grid-area: sign-up;
 }
 
-.header__navbar-mobile {
-    display: none;
-    grid-area: mobile;
-    justify-content: space-around;
-}
-
 .header__navbar--link {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    height: 7rem;
+    height: 120px;
 }
 
 .header__navbar--link:nth-child(1) {
-    border-top: 2px solid #0065FC;
-    color: #0065FC;
+    border-top: 2px solid var(--primary);
+    color: var(--primary);
 }
 
 .header__sign-up {
     font-weight: bold;
-    color: #0065FC;
+    color: var(--primary);
     padding: 16px;
 }
 
@@ -131,8 +132,7 @@ button, input {
 }
 
 .main__title p {
-    margin: 0;
-    padding: 10px 0;
+    padding: 8px 0;
     font-size: 18px;
 }
 
@@ -156,19 +156,21 @@ button, input {
     height: 48px;
     min-width: 100px;
     border: 0.5px solid #F2F2F2;
-    outline: none;
-    padding: 0 15px;
-    font-size: 20px;
+    padding: 0 16px;
+    font-weight:700;
+}
+.main__search--input::placeholder{
+    color: #000;
 }
 
 .main__search--btn {
     height: 100%;
     color: white;
     font-weight: bold;
-    background-color: #0065FC;
+    background-color: var(--primary);
     border: none;
     border-radius: 0 15px 15px 0;
-    padding: 15px;
+    padding: 16px;
     cursor: pointer;
 }
 
@@ -192,11 +194,11 @@ button, input {
     margin: 15px;
     border: 2px solid #eeeeee;
     border-radius: 50px;
-    transition: all 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 .main__search__filter__section:hover {
-    box-shadow: 2px 4px 11px -6px #595959;
+    box-shadow: 2px 4px 11px -6px var(--bs-color);
 }
 
 .main__search__filter__section--wrapper {
@@ -210,14 +212,14 @@ button, input {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: inherit;
-    width: 45px;
+    height: 100%;
+    min-width: 45px;
     font-size: 20px;
     border-radius: 50px;
 }
 
 .main__search__filter__section--icon i {
-    color: #0065FC;
+    color: var(--primary);
 }
 
 .main__search__filter__section span {
@@ -236,7 +238,7 @@ button, input {
 
 .main__info--icon {
     border: 1px solid #F2F2F2;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     border-radius: 50%;
     display: flex;
@@ -247,14 +249,16 @@ button, input {
 
 .main__info--icon i {
     font-size: 12px;
-    color: #0065FC;
+    color: var(--primary)
 }
 
 .main__hbg {
     display: grid;
-    grid-template-areas: "result result popular" "result result popular";
+    grid-template-areas: "result result popular" 
+                         "result result popular";
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 45px;
+    column-gap: 50px;
     justify-content: space-between;
 }
 
@@ -262,17 +266,19 @@ button, input {
     grid-area: result;
     background-color: #F2F2F2;
     border-radius: 25px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .main__hbg__result--title {
-    margin: 16px 0 25px 20px;
+    margin: 16px 0;
 }
 
 .main__hbg__result__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    row-gap: 30px;
+    column-gap: 30px;
 }
 
 .main__hbg__result--card {
@@ -281,8 +287,7 @@ button, input {
     border-radius: 25px;
     padding: 5px;
     background-color: #fff;
-    margin: 15px;
-    box-shadow: 0px 4px 11px -6px #595959;
+    box-shadow: 0px 4px 11px -6px var(--bs-color);
 }
 
 .main__hbg__result--card-img {
@@ -304,18 +309,20 @@ button, input {
 .main__hbg__result--card-name {
     font-weight: bold;
 }
-
+.main__hbg__result--card-price{
+    font-size:14px
+}
 .main__hbg__result--card-star i {
     color: #F2F2F2;
     font-size: 12px;
 }
 
 .main__hbg__result--card-star i[data-star='true'] {
-    color: #0065FC;
+    color:var(--primary);
 }
 
 .main__hbg__result--more-result {
-    margin: 35px 25px;
+    margin-top: 35px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -324,12 +331,11 @@ button, input {
     grid-area: popular;
     background-color: #F2F2F2;
     border-radius: 25px;
-    margin-left: 50px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .main__hbg__popular--title {
-    margin: 16px 20px 25px 20px;
+    margin: 16px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -342,6 +348,8 @@ button, input {
 .main__hbg__popular__cards {
     display: grid;
     grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
 }
 
 .main__hbg__popular--card {
@@ -350,8 +358,7 @@ button, input {
     height: 145px;
     border-radius: 20px;
     padding: 5px;
-    margin: 15px;
-    box-shadow: 0px 4px 11px -6px #595959;
+    box-shadow: 0px 4px 11px -6px var(--bs-color);
     background-color: #fff;
 }
 
@@ -385,7 +392,7 @@ button, input {
 }
 
 .main__hbg__popular--card-star i[data-star='true'] {
-    color: #0065FC;
+    color: var(--primary);
 }
 
 .main__activity {
@@ -405,7 +412,7 @@ button, input {
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    box-shadow: 0px 4px 11px -6px #595959;
+    box-shadow: 0px 4px 11px -6px var(--bs-color);
 }
 
 .main__activity--card:nth-child(1) {
@@ -571,7 +578,7 @@ button, input {
         width: 100%;
         justify-content: center;
         height: auto;
-        border-bottom: 2px solid #0065FC;
+        border-bottom: 2px solid var(--primary);
         padding: 16px;
     }
     .header__navbar--link:nth-child(1) {
@@ -582,7 +589,6 @@ button, input {
     }
     .header__sign-up {
         justify-self: flex-end;
-        
     }
     .main {
         margin: 0
@@ -614,24 +620,23 @@ button, input {
     }
     .main__hbg__result {
         background-color: #fff;
-        padding: 5px;
+        padding: 16px;
     }
     .main__hbg__result__cards {
-        grid-template-columns: 1fr
-    }
-    .main__hbg__result--card {
-        margin: 10px 5px;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
     }
     .main__hbg__popular {
         margin-left: 0;
         border-radius: 0;
-        padding: 5px;
+        padding: 16px;
     }
-    .main__hbg__popular--card {
-        margin: 5px 10px;
+    .main__hbg__popular__cards{
+        row-gap: 10px;
     }
     .main__activity {
-        padding: 20px;
+        padding: 16px;
+        margin: 0;
     }
     .main__activity__cards {
         grid-template-columns: 1fr;
