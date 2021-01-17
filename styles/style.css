@@ -1,14 +1,15 @@
+/*Import Font*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
-/*Variable*/
 
+/*Variable*/
 :root {
     /*Color*/
+
     --primary: #0065FC;
     --bs-color: #595959   /*box-shadow color*/
 }
 
 /*Base*/
-
 html {
     scroll-behavior: smooth;
 }
