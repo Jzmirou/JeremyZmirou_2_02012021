@@ -4,9 +4,9 @@
 /*Variable*/
 :root {
     /*Color*/
-
     --primary: #0065FC;
-    --bs-color: #595959   /*box-shadow color*/
+    --bs-color: #595959 ;  /*box-shadow color*/
+    --grey: #F2F2F2
 }
 
 /*Base*/
@@ -95,10 +95,11 @@ button, input {
 
 .header {
     display: grid;
-    grid-template-areas: "logo . . navbar sign-up";
-    grid-template-columns: 1fr auto auto 1fr 103px;
+    grid-template-areas: "logo navbar sign-up";
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    margin: 0 50px
+    margin: 0 50px;
+    height: 120px;
 }
 
 .header--logo {
@@ -108,6 +109,7 @@ button, input {
 .header__navbar {
     display: flex;
     justify-self: flex-end;
+    height: 100%;
     grid-area: navbar;
 }
 
@@ -119,7 +121,7 @@ button, input {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    height: 120px;
+    
 }
 
 .header__navbar--link:nth-child(1) {
@@ -158,14 +160,14 @@ button, input {
     justify-content: center;
     height: 100%;
     min-width: 50px;
-    background-color: #F2F2F2;
+    background-color: var(--grey);
     border-radius: 15px 0 0 15px;
 }
 
 .main__search--input {
     height: 48px;
     min-width: 100px;
-    border: 0.5px solid #F2F2F2;
+    border: 1px solid var(--grey);
     padding: 0 16px;
     font-weight: 700;
 }
@@ -248,7 +250,7 @@ button, input {
 }
 
 .main__info--icon {
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--grey);
     min-width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -265,8 +267,8 @@ button, input {
 
 .main__hbg {
     display: grid;
-    grid-template-areas: "result result popular" "result result popular";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "result popular";
+    grid-template-columns: 2fr 1fr;
     margin-top: 45px;
     column-gap: 50px;
     justify-content: space-between;
@@ -274,7 +276,7 @@ button, input {
 
 .main__hbg__result {
     grid-area: result;
-    background-color: #F2F2F2;
+    background-color: var(--grey);
     border-radius: 25px;
     padding: 30px;
 }
@@ -305,7 +307,7 @@ button, input {
     background-size: cover;
     width: 100%;
     height: 120px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .main__hbg__result--card-content {
@@ -325,7 +327,7 @@ button, input {
 }
 
 .main__hbg__result--card-star i {
-    color: #F2F2F2;
+    color: var(--grey);
     font-size: 12px;
 }
 
@@ -341,7 +343,7 @@ button, input {
 
 .main__hbg__popular {
     grid-area: popular;
-    background-color: #F2F2F2;
+    background-color: var(--grey);
     border-radius: 25px;
     padding: 30px;
 }
@@ -376,7 +378,7 @@ button, input {
 
 .main__hbg__popular--card-img {
     width: 125px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 15px 0 0 15px;
     background-size: cover;
     background-position: center;
 }
@@ -399,7 +401,7 @@ button, input {
 }
 
 .main__hbg__popular--card-star {
-    color: #F2F2F2;
+    color: var(--grey);
     font-size: 12px;
 }
 
@@ -408,7 +410,7 @@ button, input {
 }
 
 .main__activity {
-    margin: 60px 0;
+    padding: 50px 0;
 }
 
 .main__activity__cards {
@@ -468,7 +470,7 @@ button, input {
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #F2F2F2;
+    background-color: var(--grey);
     padding: 50px;
     column-gap: 10px;
 }
@@ -489,7 +491,7 @@ button, input {
 
 /*///////Tablette\\\\\\*/
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     .header {
         margin: 0 30px;
     }
@@ -509,7 +511,8 @@ button, input {
         margin: 5px;
     }
     .main__hbg {
-        grid-template-areas: "popular popular popular" "result result result";
+        grid-template-areas: "popular" "result";
+        grid-template-columns: 1fr;
     }
     .main__hbg__result {
         background-color: #fff;
@@ -526,7 +529,6 @@ button, input {
     }
     .main__hbg__popular__cards {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
     }
     .main__activity {
         padding: 20px;
@@ -563,6 +565,7 @@ button, input {
     }
 }
 
+/*\\\\\\TABLETTE Landscape/////*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .main__hbg__popular__cards {
         grid-template-columns: 1fr 1fr;
@@ -570,14 +573,13 @@ button, input {
 }
 
 /*\\\\\\Smartphone//////*/
-
 @media only screen and (max-width: 767px) {
     .header {
         margin: 0 0 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "logo sign-up" "navbar navbar";
-        align-items: center;
+        height: auto;
     }
     .header--logo {
         padding: 16px;
@@ -597,13 +599,10 @@ button, input {
         border-top: none;
     }
     .header__navbar--link:nth-child(2) {
-        border-bottom: 2px solid #F2F2F2;
+        border-bottom: 2px solid var(--grey);
     }
     .header__sign-up {
         justify-self: flex-end;
-    }
-    .main {
-        margin: 0
     }
     .main__title {
         margin: 0 20px;
@@ -621,17 +620,10 @@ button, input {
     .main__search--btn i {
         display: block;
     }
-    .main__search__filter {
-        display: block
-    }
     .main__search__filter__section {
         margin: 5px;
     }
-    .main__hbg {
-        grid-template-areas: "popular popular popular" "result result result";
-    }
     .main__hbg__result {
-        background-color: #fff;
         padding: 16px;
     }
     .main__hbg__result__cards {
@@ -645,6 +637,7 @@ button, input {
     }
     .main__hbg__popular__cards {
         row-gap: 10px;
+        grid-template-columns: 1fr;
     }
     .main__activity {
         padding: 16px;
