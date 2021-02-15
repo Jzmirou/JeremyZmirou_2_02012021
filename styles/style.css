@@ -121,6 +121,11 @@ button, input {
     color: #0065FC;
 }
 
+.header__navbar--link:nth-child(2):hover {
+    border-top: 2px solid #bad5ff;
+    color: #0065FC;
+}
+
 .header__sign-up {
     font-weight: bold;
     color: #0065FC;
