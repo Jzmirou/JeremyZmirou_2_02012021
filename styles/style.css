@@ -1,14 +1,6 @@
 /*Import Font*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
-/*Variable*/
-:root {
-    /*Color*/
-    --primary: #0065FC;
-    --bs-color: #595959 ;  /*box-shadow color*/
-    --grey: #F2F2F2
-}
-
 /*Base*/
 html {
     scroll-behavior: smooth;
@@ -125,13 +117,13 @@ button, input {
 }
 
 .header__navbar--link:nth-child(1) {
-    border-top: 2px solid var(--primary);
-    color: var(--primary);
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
 }
 
 .header__sign-up {
     font-weight: bold;
-    color: var(--primary);
+    color: #0065FC;
     padding: 16px;
 }
 
@@ -160,14 +152,14 @@ button, input {
     justify-content: center;
     height: 100%;
     min-width: 50px;
-    background-color: var(--grey);
+    background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
 }
 
 .main__search--input {
     height: 48px;
     min-width: 100px;
-    border: 1px solid var(--grey);
+    border: 1px solid #F2F2F2;
     padding: 0 16px;
     font-weight: 700;
 }
@@ -180,7 +172,7 @@ button, input {
     height: 100%;
     color: white;
     font-weight: bold;
-    background-color: var(--primary);
+    background-color: #0065FC;
     border: none;
     border-radius: 0 15px 15px 0;
     padding: 16px;
@@ -211,7 +203,7 @@ button, input {
 }
 
 .main__search__filter__section:hover {
-    box-shadow: 2px 4px 11px -6px var(--bs-color);
+    box-shadow: 2px 4px 11px -6px #595959;
 }
 
 .main__search__filter__section--wrapper {
@@ -232,7 +224,7 @@ button, input {
 }
 
 .main__search__filter__section--icon i {
-    color: var(--primary);
+    color: #0065FC;
 }
 
 .main__search__filter__section span {
@@ -250,7 +242,7 @@ button, input {
 }
 
 .main__info--icon {
-    border: 1px solid var(--grey);
+    border: 1px solid #F2F2F2;
     min-width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -262,7 +254,7 @@ button, input {
 
 .main__info--icon i {
     font-size: 12px;
-    color: var(--primary)
+    color: #0065FC
 }
 
 .main__hbg {
@@ -276,7 +268,7 @@ button, input {
 
 .main__hbg__result {
     grid-area: result;
-    background-color: var(--grey);
+    background-color: #F2F2F2;
     border-radius: 25px;
     padding: 30px;
 }
@@ -299,7 +291,7 @@ button, input {
     border-radius: 25px;
     padding: 5px;
     background-color: #fff;
-    box-shadow: 0px 4px 11px -6px var(--bs-color);
+    box-shadow: 0px 4px 11px -6px #595959;
 }
 
 .main__hbg__result--card-img {
@@ -327,12 +319,12 @@ button, input {
 }
 
 .main__hbg__result--card-star i {
-    color: var(--grey);
+    color: #F2F2F2;
     font-size: 12px;
 }
 
 .main__hbg__result--card-star i[data-star='true'] {
-    color: var(--primary);
+    color: #0065FC;
 }
 
 .main__hbg__result--more-result {
@@ -343,7 +335,7 @@ button, input {
 
 .main__hbg__popular {
     grid-area: popular;
-    background-color: var(--grey);
+    background-color: #F2F2F2;
     border-radius: 25px;
     padding: 30px;
 }
@@ -372,7 +364,7 @@ button, input {
     height: 145px;
     border-radius: 20px;
     padding: 5px;
-    box-shadow: 0px 4px 11px -6px var(--bs-color);
+    box-shadow: 0px 4px 11px -6px #595959;
     background-color: #fff;
 }
 
@@ -401,12 +393,12 @@ button, input {
 }
 
 .main__hbg__popular--card-star {
-    color: var(--grey);
+    color: #F2F2F2;
     font-size: 12px;
 }
 
 .main__hbg__popular--card-star i[data-star='true'] {
-    color: var(--primary);
+    color: #0065FC;
 }
 
 .main__activity {
@@ -426,7 +418,7 @@ button, input {
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    box-shadow: 0px 4px 11px -6px var(--bs-color);
+    box-shadow: 0px 4px 11px -6px #595959;
 }
 
 .main__activity--card:nth-child(1) {
@@ -470,7 +462,7 @@ button, input {
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: var(--grey);
+    background-color: #F2F2F2;
     padding: 50px;
     column-gap: 10px;
 }
@@ -592,14 +584,14 @@ button, input {
         width: 100%;
         justify-content: center;
         height: auto;
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 2px solid #0065FC;
         padding: 16px;
     }
     .header__navbar--link:nth-child(1) {
         border-top: none;
     }
     .header__navbar--link:nth-child(2) {
-        border-bottom: 2px solid var(--grey);
+        border-bottom: 2px solid #F2F2F2;
     }
     .header__sign-up {
         justify-self: flex-end;
