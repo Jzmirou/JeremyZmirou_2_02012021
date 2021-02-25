@@ -105,10 +105,6 @@ button, input {
     grid-area: navbar;
 }
 
-.header__sign-up {
-    grid-area: sign-up;
-}
-
 .header__navbar--link {
     display: flex;
     align-items: center;
@@ -133,6 +129,7 @@ button, input {
     font-weight: bold;
     color: #0065FC;
     padding: 16px;
+    grid-area: sign-up;
 }
 
 .main {
